@@ -1,0 +1,23 @@
+{
+  "name": "curelink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shreyansh770/Curelink.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shreyansh770/Curelink/issues"
+  },
+  "homepage": "https://github.com/shreyansh770/Curelink#readme",
+  "dependencies": {
+    "mongoose": "^6.3.2"
+  }
+}
