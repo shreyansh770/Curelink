@@ -23,6 +23,11 @@ const subSchema = new mongoose.Schema({
         subto: [{
             type: String
         }]
+    },
+
+    role:{
+        type:String,
+        enum : ["Admin","User"]
     }
 
 })

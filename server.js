@@ -1,13 +1,16 @@
 const express = require('express')
-const subModel = require('./Model/SubscriberModel')
 const userRouter = require('./Routers/user')
 
 const app = express();
 
 // middleware
 app.use(express.json())
+app.use(express.urlencoded({limit:'50mb',extended:true}))
 
-app.use('/auth',userRouter)
+
+// Routers
+app.use('/admin',userRouter)
+
 
 
 app.listen(8080,()=>{
