@@ -16,22 +16,23 @@ mongoose.connect(db_link, {
 const subSchema = new mongoose.Schema({
     email: {
         type: String,
+        unique: true,
         required: true
     },
 
     topics: {
-        subto: [{
+        type: [{
             type: String
         }]
     },
 
-    role:{
-        type:String,
-        enum : ["Admin","User"]
+    role: {
+        type: String,
+        enum: ["Admin", "User"]
     }
 
 })
 
-const subModel = mongoose.model("subModel",subSchema);
+const subModel = mongoose.model("subModel", subSchema);
 
 module.exports = subModel;

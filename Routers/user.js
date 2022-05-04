@@ -6,9 +6,10 @@ const userRouter = express.Router();
 
 userRouter.route('/add').post(addAdmin)
 userRouter.route('/create').post(createContent)
+userRouter.route('/subscribe').post(subUser)
 
 
-// create admin (only admin allowed)
+// add admin (only admin allowed)
 
 async function addAdmin(req, res) {
 
@@ -31,6 +32,7 @@ async function addAdmin(req, res) {
     }
 }
 
+// function to add content
 async function createContent(req, res) {
     try {
 
@@ -44,7 +46,31 @@ async function createContent(req, res) {
         })
 
     } catch (error) {
+        res.status(500).json({
+            message: error.message
+        })
+    }
+}
 
+// user subscription 
+
+async function subUser(req, res) {
+    try {
+
+        let userObj = req.body
+
+        let user = await subModel.create(userObj);
+
+        res.json({
+            message: "Thankyou for subscribing to our newsletter",
+            user
+        })
+
+
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        })
     }
 }
 

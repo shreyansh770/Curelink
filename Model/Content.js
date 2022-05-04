@@ -8,7 +8,7 @@ mongoose.connect(db_link, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(db => {
-    console.log("subscriber model connected");
+    console.log("content model connected");
 }).catch((err) => {
     console.log(err);
 })
