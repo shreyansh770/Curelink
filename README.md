@@ -26,17 +26,11 @@ Made a server side app for sending newsletters to subscribed users for the topic
 ![2022-05-05](https://user-images.githubusercontent.com/56127597/166907311-485bd110-61c0-472c-a346-a385419675d6.png)
 
 
-
-
-## ADMIN ADDING CONTENT 
-![2022-05-05 (2)](https://user-images.githubusercontent.com/56127597/166910276-f2d5e4c3-45f5-42a0-9881-5a2acdb22e59.png)
-
-
-
-
 ## USER SUBSCRIBING
 ![2022-05-05 (4)](https://user-images.githubusercontent.com/56127597/166910575-41d391b5-a64f-4e78-95a7-fa9bc0f6b0aa.png)
 
+## ADMIN ADDING CONTENT 
+![2022-05-05 (2)](https://user-images.githubusercontent.com/56127597/166910276-f2d5e4c3-45f5-42a0-9881-5a2acdb22e59.png)
 
 
 
