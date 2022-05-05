@@ -39,7 +39,7 @@ Made a server side app for sending newsletters to subscribed users for the topic
 ![2022-05-05 (3)](https://user-images.githubusercontent.com/56127597/166910398-74875042-2fea-42ab-bdf9-9853faaaef1d.png)
 
 ## CONTENT STORAGE
-
+![2022-05-05 (8)](https://user-images.githubusercontent.com/56127597/166921150-05f2fc60-2d60-48d4-bd6b-e38674334dad.png)
 ## USER STORAGE
 ![2022-05-05 (7)](https://user-images.githubusercontent.com/56127597/166920865-c7e94d85-4ae3-46ef-918b-8842746a683f.png)
 
