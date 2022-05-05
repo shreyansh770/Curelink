@@ -1,4 +1,5 @@
 const express = require('express');
+const authRouter = require('./Routers/isAuth');
 const {
     articlesHandler
 } = require('./Routers/newletterFun');
@@ -16,6 +17,7 @@ app.use(express.urlencoded({
 
 // Routers
 app.use('/admin', userRouter)
+app.use('/auth',authRouter)
 
 
 // setInterval(() => {

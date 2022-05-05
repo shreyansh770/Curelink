@@ -4,7 +4,7 @@ const subModel = require('../Model/SubscriberModel');
 
 const userRouter = express.Router();
 
-userRouter.route('/add').post(addAdmin)
+userRouter.route('/add').post(addAdmin) 
 userRouter.route('/create').post(createContent)
 userRouter.route('/subscribe').post(subUser)
 

@@ -37,7 +37,7 @@ const contentSchema = mongoose.Schema({
 })
 
 contentSchema.pre('save', function (next) {
-    this.time = Math.round(new Date().getTime()/1000);
+    this.time = Math.round(new Date().getTime()/1000); // 1970 
     next()
 })
 

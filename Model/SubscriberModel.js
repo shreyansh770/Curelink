@@ -20,6 +20,10 @@ const subSchema = new mongoose.Schema({
         required: true
     },
 
+    password:{
+        type:String
+    },
+
     topics: {
         type: [{
             type: String
