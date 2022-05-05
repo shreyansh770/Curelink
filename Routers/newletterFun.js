@@ -22,7 +22,7 @@ const userHandler = async (event, newletters) => {
 
 
             // send mail function
-            // sendMail(email, newletters)
+            sendMail(email, newletters)
         }
 
     } catch (error) {

@@ -20,10 +20,10 @@ app.use('/admin', userRouter)
 app.use('/auth',authRouter)
 
 
-// setInterval(() => {
+setInterval(() => {
+    console.log("run");
     articlesHandler()
-
-// }, 360000)
+}, 300000)
 
 
 
