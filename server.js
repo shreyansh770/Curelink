@@ -23,7 +23,7 @@ app.use('/auth',authRouter)
 // setInterval(() => {
     articlesHandler()
 
-// }, 300)
+// }, 360000)
 
 
 

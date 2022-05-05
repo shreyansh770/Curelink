@@ -1,11 +1,15 @@
 const express = require('express');
 const contentModel = require('../Model/Content');
 const subModel = require('../Model/SubscriberModel');
+const {
+    protectRoute,
+    isAuthorized
+} = require('./middleware');
 
 const userRouter = express.Router();
 
-userRouter.route('/add').post(addAdmin) 
-userRouter.route('/create').post(createContent)
+userRouter.route('/add').post(protectRoute, isAuthorized(['Admin']), addAdmin)
+userRouter.route('/create').post(protectRoute, isAuthorized(['Admin']), createContent)
 userRouter.route('/subscribe').post(subUser)
 
 
@@ -32,7 +36,7 @@ async function addAdmin(req, res) {
     }
 }
 
-// function to add content
+// function to add content (only admins)
 async function createContent(req, res) {
     try {
 
@@ -73,6 +77,10 @@ async function subUser(req, res) {
         })
     }
 }
+
+// user subscribing to topics
+
+
 
 
 
