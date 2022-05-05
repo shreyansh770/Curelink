@@ -28,6 +28,8 @@ Made a server side app for sending newsletters to subscribed users for the topic
 
 
 ## ADMIN ADDING CONTENT 
+![2022-05-05 (2)](https://user-images.githubusercontent.com/56127597/166910276-f2d5e4c3-45f5-42a0-9881-5a2acdb22e59.png)
+
 
 
 
