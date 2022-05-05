@@ -17,9 +17,10 @@ Made a server side app for sending newsletters to subscribed users for the topic
 
 ## WORKING 
  1) The user subscribes to any number of topics they like
- 2) The articles are sorted according the newest first i.e the arcticle which have been created in the last 5 mins will only be send to the specific user
- 3) Mails are send to the subscriber using *NODEMAILER*
- 4) The process has been automated using *SET INTERVAL* which has been designed to send newsletters to the subscriber every 6 mins
+ 2) The admin adds the article which can be stored in the database and timestamp would be added to it automatically done using *DATE CONSTRUCTOR*
+ 3) The articles are sorted according the newest first i.e the arcticle which have been created in the last 5 mins will only be send to the specific user
+ 4) Mails are send to the subscriber using *NODEMAILER*
+ 5) The process has been automated using *SET INTERVAL* which has been designed to send newsletters to the subscriber every 5 mins
 
 
 ## ADMIN LOGGING IN 
@@ -38,5 +39,14 @@ Made a server side app for sending newsletters to subscribed users for the topic
 ![2022-05-05 (3)](https://user-images.githubusercontent.com/56127597/166910398-74875042-2fea-42ab-bdf9-9853faaaef1d.png)
 
 
+##CODE INFO
+1) server.js -> main file needs to be run(nodemon server.js) to start the server
+2) Routers -> contains function that would run at various routes
+3) helpers -> some helper function like sendMail function for sending mail
+4) Model -> Contains Schema model for Content and Subscriber DB
 
+
+## Improvements and Pitfalls
+1) One thing where the code could be optimised is the complexity while sending mail to the subsrciber
+2) There would be certain delay of fews microseconds due to set interval when working on a larger scale 
  
