@@ -23,7 +23,7 @@ app.use('/auth',authRouter)
 setInterval(() => {
     console.log("run");
     articlesHandler()
-}, 300001)
+}, 30000)
 
 
 
