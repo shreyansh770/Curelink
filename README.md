@@ -38,8 +38,11 @@ Made a server side app for sending newsletters to subscribed users for the topic
 ## USER RECEIVING NEWSLETTER 
 ![2022-05-05 (3)](https://user-images.githubusercontent.com/56127597/166910398-74875042-2fea-42ab-bdf9-9853faaaef1d.png)
 
+## CONTENT STORAGE
 
-##CODE INFO
+## USER STORAGE
+
+## CODE INFO
 1) server.js -> main file needs to be run(nodemon server.js) to start the server
 2) Routers -> contains function that would run at various routes
 3) helpers -> some helper function like sendMail function for sending mail
@@ -50,3 +53,5 @@ Made a server side app for sending newsletters to subscribed users for the topic
 1) One thing where the code could be optimised is the complexity while sending mail to the subsrciber
 2) There would be certain delay of fews microseconds due to set interval when working on a larger scale 
  
+
+Was a great experience working on this assignment thankyou CURELINK for providing me with this oppurtunity. Hoping to get more opportunities to work with the team
