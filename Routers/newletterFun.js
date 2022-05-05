@@ -18,19 +18,57 @@ const contentModel = require('../Model/Content');
 // the article with that topic and will send emails to those users
 
 
+
+const userHandler = async () => {
+
+    try {
+
+    } catch (error) {
+
+    }
+}
+
+
 module.exports.articlesHandler = async function () {
 
-    let timeNow = Math.round(new Date().getTime() / 1000);
-    let time5minago = Math.round(timeNow - 5 * 60000);
+    try {
 
-    // getting all the articles within the current 5min timestamp
+        
+        let timeNow = Math.round(new Date().getTime() / 1000);
+        let time5minago = Math.round((new Date().getTime() - 5 * 60000) / 1000);
 
-    let articles = await contentModel.find();
+        // getting all the articles within the current 5min timestamp
 
-    let Sports =[];
-    let Current_Affairs =[];
-    let Entertainment =[];
-    let Astrology =[];
-    let News=[]
+        let articles = await contentModel.find();
+
+        let Sports = [];
+        let Current_Affairs = [];
+        let Entertainment = [];
+        let Astrology = [];
+        let News = []
+
+        for (let i = 0; i < articles.length; i++) {
+
+            if (articles[i].topic === 'Sports' && articles[i].time <= timeNow && articles[i].time >= time5minago) {
+                Sports.push(articles[i]);
+            } else if (articles[i].topic === 'Current Affairs' && articles[i].time <= timeNow && articles[i].time >= time5minago) {
+                Current_Affairs.push(articles[i]);
+            } else if (articles[i].topic === 'Entertainment' && articles[i].time <= timeNow && articles[i].time >= time5minago) {
+                Entertainment.push(articles[i]);
+            } else if (articles[i].topic === 'Astrology' && articles[i].time <= timeNow && articles[i].time >= time5minago) {
+                Astrology.push(articles[i]);
+            } else if (articles[i].topic === 'News' && articles[i].time <= timeNow && articles[i].time >= time5minago) {
+                News.push(articles[i]);
+            }
+
+        }
+    } catch (error) {
+
+    }
+
+
+
+
+
 
 }

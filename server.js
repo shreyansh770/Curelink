@@ -19,7 +19,7 @@ app.use('/admin', userRouter)
 
 
 // setInterval(() => {
-    // articlesHandler()
+    articlesHandler()
 
 // }, 300)
 
