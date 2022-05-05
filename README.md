@@ -38,6 +38,8 @@ Made a server side app for sending newsletters to subscribed users for the topic
 
 
 ## USER RECEIVING NEWSLETTER 
+![2022-05-05 (3)](https://user-images.githubusercontent.com/56127597/166910398-74875042-2fea-42ab-bdf9-9853faaaef1d.png)
+
 
 
  
