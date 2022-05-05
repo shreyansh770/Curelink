@@ -1,5 +1,7 @@
 const express = require('express');
+const sendMail = require('../helpers/sendMail');
 const contentModel = require('../Model/Content');
+const subModel = require('../Model/SubscriberModel')
 
 // const newsRouter = express.Router
 
@@ -19,9 +21,24 @@ const contentModel = require('../Model/Content');
 
 
 
-const userHandler = async () => {
+const userHandler = async (event, newletters) => {
 
     try {
+
+
+        let allUsers = await subModel.find({});
+
+        let subUsers = allUsers.filter((user) => {
+            return user.topics ?.includes(event)
+        })
+
+        // sending mail to sub users
+        for (let i = 0; i < subUsers.length; i++) {
+            let email = subUsers[i].email;
+
+            // send mail function
+            // sendMail(email, newletters)
+        }
 
     } catch (error) {
 
@@ -33,7 +50,7 @@ module.exports.articlesHandler = async function () {
 
     try {
 
-        
+
         let timeNow = Math.round(new Date().getTime() / 1000);
         let time5minago = Math.round((new Date().getTime() - 5 * 60000) / 1000);
 
@@ -45,7 +62,7 @@ module.exports.articlesHandler = async function () {
         let Current_Affairs = [];
         let Entertainment = [];
         let Astrology = [];
-        let News = []
+        let Health_Care = []
 
         for (let i = 0; i < articles.length; i++) {
 
@@ -57,11 +74,38 @@ module.exports.articlesHandler = async function () {
                 Entertainment.push(articles[i]);
             } else if (articles[i].topic === 'Astrology' && articles[i].time <= timeNow && articles[i].time >= time5minago) {
                 Astrology.push(articles[i]);
-            } else if (articles[i].topic === 'News' && articles[i].time <= timeNow && articles[i].time >= time5minago) {
-                News.push(articles[i]);
+            } else if (articles[i].topic === 'Health Care' && articles[i].time <= timeNow && articles[i].time >= time5minago) {
+                Health_Care.push(articles[i]);
             }
 
         }
+
+        for (let i = 0; i < 5; i++) {
+
+            if (i == 0 && Sports.length != 0) {
+                userHandler("Sports", Sports);
+            }
+
+            if (i == 1 && Current_Affairs.length != 0) {
+                userHandler("Current Affairs", Current_Affairs);
+            }
+
+            if (i == 2 && Entertainment.length != 0) {
+                userHandler("Entertainment", Entertainment);
+            }
+
+            if (i == 3 && Astrology.length != 0) {
+                userHandler("Astrology", Astrology);
+            }
+
+            if (i == 4 && Health_Care.length != 0) {
+                console.log(Health_Care.length);
+                userHandler("Health Care", Health_Care);
+            }
+        }
+
+        // userHandler()
+
     } catch (error) {
 
     }

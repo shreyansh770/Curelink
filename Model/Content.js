@@ -19,7 +19,7 @@ const contentSchema = mongoose.Schema({
     topic: {
         type: "String",
         required: true,
-        enum: ['Sports', 'Entertainment', 'Current Affairs', 'News', 'Astrology']
+        enum: ['Sports', 'Entertainment', 'Current Affairs', 'Health Care', 'Astrology']
     },
 
     content: {
